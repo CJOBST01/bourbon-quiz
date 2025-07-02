@@ -14,25 +14,29 @@
         <p>Match each bourbon to the correct glass (A–D).</p>
         <div id="bottle-image">
             <!-- You can add your image here later -->
-            <img id="bottlePhoto" src="images/brbnbottles.png" alt="Bourbon Bottles" style="display: none;" />
+            <img id="bottlePhoto" src="images/brbnbottles.png" alt="Bourbon Bottles"/>
         </div>
     </header>
 
     <main>
         <form action="https://formspree.io/f/xqabjevw" method="POST">
-            <label>
-                Your Name:
-                <select name="selectedName" onchange="toggleCustomName(this)" required>
-                    <option value="">-- Select your name --</option>
+            <div class="name-section">
+                <label for="selectedName">Select Your Name:</label>
+                <select name="selectedName" id="selectedName" onchange="toggleCustomName(this)" required>
+                    <option value="">-- Choose your name --</option>
                     <option value="Nancy">Nancy</option>
                     <option value="Ken">Ken</option>
                     <option value="Sarah">Sarah</option>
                     <option value="Lauren">Lauren</option>
                     <option value="Adam">Adam</option>
                     <option value="Chris">Chris</option>
-                    <option value="custom">Other (Enter Manually)</option>
+                    <option value="custom">Custom Gamertag</option>
                 </select>
-            </label>
+            
+                <div id="customNameWrapper" style="display: none;">
+                    <label for="customName">Custom Name:</label>
+                    <input type="text" name="customName" id="customName" placeholder="Type your name" />
+                </div>        </div>
 
             <div id="customNameWrapper" style="display: none;">
                 <label>
