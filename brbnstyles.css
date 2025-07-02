@@ -1,6 +1,6 @@
 /* Page Background */
 body {
-    background: url('https: //sdmntprwestcentralus.oaiusercontent.com/files/00000000-2610-61fb-a9b4-a00b1e07c3a8/raw?se=2025-07-02T18%3A50%3A01Z&sp=r&sv=2024-08-04&sr=b&scid=c6244fec-3966-570a-a74a-40b3fbc58b12&skoid=e9d2f8b1-028a-4cff-8eb1-d0e66fbefcca&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-01T21%3A30%3A21Z&ske=2025-07-02T21%3A30%3A21Z&sks=b&skv=2024-08-04&sig=yXPIfPyjZGNZBBzVEZn%2BC0Y4hMsOc%2Bv9rIt6TyOwANc%3D') no-repeat center center fixed;
+    background: url('images/backgroundchar.png') no-repeat center center fixed;
     background-size: cover;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
