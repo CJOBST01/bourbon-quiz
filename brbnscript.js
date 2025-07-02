@@ -14,3 +14,17 @@ function toggleCustomName(selectElement) {
       image.style.transform = `translateY(${scrolled * speed}px)`;
     }
   });
+  function isMobileDevice() {
+    return window.innerWidth < 768; // Treat anything under 768px as mobile
+  }
+  
+  if (!isMobileDevice()) {
+    window.addEventListener('scroll', () => {
+      const speed = 0.35;
+      const scrolled = window.scrollY;
+      const image = document.getElementById('bottlePhoto');
+      if (image) {
+        image.style.transform = `translateY(${scrolled * speed}px)`;
+      }
+    });
+  }

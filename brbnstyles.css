@@ -76,12 +76,12 @@ button:hover {
 }
 
 #bottlePhoto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    will-change: transform;
-    transform: translateZ(0); }
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    position: static;
+    transform: none; }
 
         .name-section {
             margin-bottom: 30px;
