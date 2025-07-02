@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blind Bourbon Tasting Quiz</title>
+    <link rel="stylesheet" href="brbnstyles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Blind Bourbon Tasting Challenge</h1>
+        <p>Match each bourbon to the correct glass (A–D).</p>
+        <div id="bottle-image">
+            <!-- You can add your image here later -->
+            <img id="bottlePhoto" src="https://drive.google.com/file/d/1CF3bkE7pR4dQFcZ-fufOgdQIuI9u4vBd/view?usp=sharing" alt="Bourbon Bottles" style="display: none;" />
+        </div>
+    </header>
+
+    <main>
+        <form action="https://formspree.io/f/xqabjevw" method="POST">
+            <label>
+                Your Name:
+                <select name="selectedName" onchange="toggleCustomName(this)" required>
+                    <option value="">-- Select your name --</option>
+                    <option value="Nancy">Nancy</option>
+                    <option value="Ken">Ken</option>
+                    <option value="Sarah">Sarah</option>
+                    <option value="Lauren">Lauren</option>
+                    <option value="Adam">Adam</option>
+                    <option value="Chris">Chris</option>
+                    <option value="custom">Other (Enter Manually)</option>
+                </select>
+            </label>
+
+            <div id="customNameWrapper" style="display: none;">
+                <label>
+                    Custom Name:
+                    <input type="text" name="customName" placeholder="Type your name" />
+                </label>
+            </div>
+
+            <fieldset>
+                <legend>Michter's Small Batch</legend>
+                <label><input type="radio" name="michters" value="A" required /> Glass A</label>
+                <label><input type="radio" name="michters" value="B" /> Glass B</label>
+                <label><input type="radio" name="michters" value="C" /> Glass C</label>
+                <label><input type="radio" name="michters" value="D" /> Glass D</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Rabbit Hole Heigold</legend>
+                <label><input type="radio" name="heigold" value="A" required /> Glass A</label>
+                <label><input type="radio" name="heigold" value="B" /> Glass B</label>
+                <label><input type="radio" name="heigold" value="C" /> Glass C</label>
+                <label><input type="radio" name="heigold" value="D" /> Glass D</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Uncle Nearest Single Barrel</legend>
+                <label><input type="radio" name="uncleNearest" value="A" required /> Glass A</label>
+                <label><input type="radio" name="uncleNearest" value="B" /> Glass B</label>
+                <label><input type="radio" name="uncleNearest" value="C" /> Glass C</label>
+                <label><input type="radio" name="uncleNearest" value="D" /> Glass D</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Old Forester The 117 Series</legend>
+                <label><input type="radio" name="oldForester" value="A" required /> Glass A</label>
+                <label><input type="radio" name="oldForester" value="B" /> Glass B</label>
+                <label><input type="radio" name="oldForester" value="C" /> Glass C</label>
+                <label><input type="radio" name="oldForester" value="D" /> Glass D</label>
+            </fieldset>
+
+            <input type="hidden" name="_subject" value="Bourbon Tasting Submission" />
+            <input type="hidden" name="_next" value="https://your-site.com/thank-you.html" />
+            <input type="text" name="_gotcha" style="display: none" />
+
+            <button type="submit">Submit Your Guess</button>
+        </form>
+    </main>
+
+    <script src="brbnscript.js"></script>
+</body>
+
+</html>
