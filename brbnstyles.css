@@ -72,20 +72,15 @@ button:hover {
 }
 
 #bottle-image {
-  position: relative;
-  height: 300px;
-  /* Adjust to your desired visible height */
-  overflow: hidden;
-  z-index: 1;
+  margin: 0;
+  padding: 0;
 }
 
 #bottlePhoto {
-  max-width: 100%;
-  height: auto;
   display: block;
+  width: 100%;
+  height: auto;
   margin: 0 auto;
-  position: static;
-  transform: none;
 }
 
 .name-section {
