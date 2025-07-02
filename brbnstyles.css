@@ -137,10 +137,11 @@ legend {
   background-color: transparent;
   color: #ffd08a;
   border: 1px solid #ffd08a;
-  padding: 2px 8px;
+  padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
+  margin-bottom: 15px;
 }
 
 .toggle-notes:hover {
