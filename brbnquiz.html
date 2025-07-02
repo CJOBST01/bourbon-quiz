@@ -1,91 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blind Bourbon Tasting Quiz</title>
     <link rel="stylesheet" href="brbnstyles.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Blind Bourbon Tasting Challenge</h1>
-        <p>Match each bourbon to the correct glass (A–D).</p>
-        <div id="bottle-image">
-            <!-- You can add your image here later -->
-            <img id="bottlePhoto" src="images/brbnbottles.png" alt="Bourbon Bottles"/>
-        </div>
+      <h1>Blind Bourbon Tasting Challenge</h1>
+      <p>Match each bourbon to the correct glass (A–D).</p>
+      <div id="bottle-image">
+        <!-- You can add your image here later -->
+        <img
+          id="bottlePhoto"
+          src="images/brbnbottles.png"
+          alt="Bourbon Bottles"
+        />
+      </div>
     </header>
 
     <main>
-        <form action="https://formspree.io/f/xqabjevw" method="POST">
-            <div class="name-section">
-                <label for="selectedName">Select Your Name:</label>
-                <select name="selectedName" id="selectedName" onchange="toggleCustomName(this)" required>
-                    <option value="">-- Choose your name --</option>
-                    <option value="Nancy">Nancy</option>
-                    <option value="Ken">Ken</option>
-                    <option value="Sarah">Sarah</option>
-                    <option value="Lauren">Lauren</option>
-                    <option value="Adam">Adam</option>
-                    <option value="Chris">Chris</option>
-                    <option value="custom">Custom Gamertag</option>
-                </select>
-            
-                <div id="customNameWrapper" style="display: none;">
-                    <label for="customName">Custom Name:</label>
-                    <input type="text" name="customName" id="customName" placeholder="Type your name" />
-                </div>        </div>
+      <form action="https://formspree.io/f/xqabjevw" method="POST">
+        <div class="name-section">
+          <label for="selectedName">Select Your Name:</label>
+          <select
+            name="selectedName"
+            id="selectedName"
+            onchange="toggleCustomName(this)"
+            required
+          >
+            <option value="">-- Choose your name --</option>
+            <option value="Nancy">Nancy</option>
+            <option value="Ken">Ken</option>
+            <option value="Sarah">Sarah</option>
+            <option value="Lauren">Lauren</option>
+            <option value="Adam">Adam</option>
+            <option value="Chris">Chris</option>
+            <option value="custom">Custom Gamertag</option>
+          </select>
 
-            <div id="customNameWrapper" style="display: none;">
-                <label>
-                    Custom Name:
-                    <input type="text" name="customName" placeholder="Type your name" />
-                </label>
-            </div>
+          <div id="customNameWrapper" style="display: none">
+            <label for="customName">Custom Name:</label>
+            <input
+              type="text"
+              name="customName"
+              id="customName"
+              placeholder="Type your name"
+            />
+          </div>
+        </div>
 
-            <fieldset>
-                <legend>Michter's Small Batch</legend>
-                <label><input type="radio" name="michters" value="A" required /> Glass A</label>
-                <label><input type="radio" name="michters" value="B" /> Glass B</label>
-                <label><input type="radio" name="michters" value="C" /> Glass C</label>
-                <label><input type="radio" name="michters" value="D" /> Glass D</label>
-            </fieldset>
+        <div id="customNameWrapper" style="display: none">
+          <label>
+            Custom Name:
+            <input type="text" name="customName" placeholder="Type your name" />
+          </label>
+        </div>
 
-            <fieldset>
-                <legend>Rabbit Hole Heigold</legend>
-                <label><input type="radio" name="heigold" value="A" required /> Glass A</label>
-                <label><input type="radio" name="heigold" value="B" /> Glass B</label>
-                <label><input type="radio" name="heigold" value="C" /> Glass C</label>
-                <label><input type="radio" name="heigold" value="D" /> Glass D</label>
-            </fieldset>
+        <fieldset>
+          <legend>
+            Michter's Small Batch</legend>
+            <button
+              type="button"
+              class="toggle-notes"
+              onclick="toggleNotes(this)"
+            >
+              Show Notes
+            </button>
+          
 
-            <fieldset>
-                <legend>Uncle Nearest Single Barrel</legend>
-                <label><input type="radio" name="uncleNearest" value="A" required /> Glass A</label>
-                <label><input type="radio" name="uncleNearest" value="B" /> Glass B</label>
-                <label><input type="radio" name="uncleNearest" value="C" /> Glass C</label>
-                <label><input type="radio" name="uncleNearest" value="D" /> Glass D</label>
-            </fieldset>
+          <div class="tasting-notes-float">
+            <strong>Nose:</strong> Warm aromas of baked goods dominate —
+            vanilla, cinnamon, apples, and brown butter evoke a streusel
+            dessert. Rich caramel rounds out the sweet, inviting profile.<br /><br />
+            <strong>Palate:</strong> A touch of rye spice and cinnamon heat adds
+            depth. The sweetness from the nose evolves into caramel candies and
+            toasted citrus zest, with just a hint of oak peeking through.<br /><br />
+            <strong>Finish:</strong> Medium in length, offering more toasted
+            orange zest, cinnamon, and clove. Rye spice lingers pleasantly,
+            adding complexity to an otherwise sweet and smooth close.<br /><br />
+            <strong>Score:</strong> 5.7/10
+          </div>
 
-            <fieldset>
-                <legend>Old Forester The 117 Series</legend>
-                <label><input type="radio" name="oldForester" value="A" required /> Glass A</label>
-                <label><input type="radio" name="oldForester" value="B" /> Glass B</label>
-                <label><input type="radio" name="oldForester" value="C" /> Glass C</label>
-                <label><input type="radio" name="oldForester" value="D" /> Glass D</label>
-            </fieldset>
+          <label
+            ><input type="radio" name="michters" value="A" required /> Glass
+            A</label
+          >
+          <label
+            ><input type="radio" name="michters" value="B" /> Glass B</label
+          >
+          <label
+            ><input type="radio" name="michters" value="C" /> Glass C</label
+          >
+          <label
+            ><input type="radio" name="michters" value="D" /> Glass D</label
+          >
+        </fieldset>
 
-            <input type="hidden" name="_subject" value="Bourbon Tasting Submission" />
-            <input type="hidden" name="_next" value="https://your-site.com/thank-you.html" />
-            <input type="text" name="_gotcha" style="display: none" />
+        <fieldset>
+          <legend>
+            Rabbit Hole Heigold</legend>
+            <button
+              type="button"
+              class="toggle-notes"
+              onclick="toggleNotes(this)"
+            >
+              Show Notes
+            </button>
+          
 
-            <button type="submit">Submit Your Guess</button>
-        </form>
+          <div class="tasting-notes-float">
+            <strong>Mash Bill:</strong> 70% Corn, 25% Rye, 5% Malted Barley<br />
+            <strong>Barrel & Aging:</strong> Aged at least 3 years in #3 char,
+            toasted barrels. Metal-clad warehouse entry at 110 proof.<br /><br />
+            <strong>Nose:</strong> Pleasant aromas of toasted caramel, toffee,
+            and a bit of butterscotch — all welcome and familiar to bourbon
+            lovers. Vanilla custard and light oak lend subtle barrel character,
+            though the toasted grain scent peeks through. It’s not harsh or raw,
+            but it does suggest youth. Notably absent are fruit and deeper aging
+            aromas like leather or tobacco. A gentle, pleasant nose, if not
+            especially dynamic.
+          </div>
+
+          <label
+            ><input type="radio" name="heigold" value="A" required /> Glass
+            A</label
+          >
+          <label><input type="radio" name="heigold" value="B" /> Glass B</label>
+          <label><input type="radio" name="heigold" value="C" /> Glass C</label>
+          <label><input type="radio" name="heigold" value="D" /> Glass D</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Uncle Nearest Single Barrel</legend>
+          <button
+            type="button"
+            class="toggle-notes"
+            onclick="toggleNotes(this)"
+          >
+            Show Notes
+          </button>
+          <div class="tasting-notes-float">
+            <strong>Nose:</strong> Sweet, nutty aromas of marzipan, caramel, and
+            vanilla wafers open the experience. Roasted corn-on-the-cob and
+            cinnamon spice follow, with subtle floral notes and a touch of dry
+            hay in the background.<br /><br />
+
+            <strong>Palate:</strong> Rich and rounded. Flavors include roasted
+            corn, marzipan vanilla, new leather, and oak. Fruit character
+            arrives through cherries, orange zest, grape soda, and even a hint
+            of Flintstone chewable vitamins. Caramel turns into wildflower
+            honey, chased by a splash of ginger beer.<br /><br />
+
+            <strong>Finish:</strong> Grain-forward and lingering. Think hoecakes
+            topped with vanilla icing, almond skins replacing the earlier
+            marzipan, and tannins reminiscent of wood polish. Cherries and
+            bitter orange persist with a surprising whisper of banana at the
+            end.<br /><br />
+
+            <strong>Score:</strong> 7.6/10
+          </div>
+          <label
+            ><input type="radio" name="uncleNearest" value="A" required /> Glass
+            A</label
+          >
+          <label
+            ><input type="radio" name="uncleNearest" value="B" /> Glass B</label
+          >
+          <label
+            ><input type="radio" name="uncleNearest" value="C" /> Glass C</label
+          >
+          <label
+            ><input type="radio" name="uncleNearest" value="D" /> Glass D</label
+          >
+        </fieldset>
+
+        <fieldset>
+          <legend>Old Forester The 117 Series</legend>
+          <button
+            type="button"
+            class="toggle-notes"
+            onclick="toggleNotes(this)"
+          >
+            Show Notes
+          </button>
+          <div class="tasting-notes-float">
+            <strong>Mash Bill:</strong> 65% Rye, 20% Malted Barley, 15% Corn<br />
+            <strong>Age:</strong> 10 years (Bottled-In-Bond)<br /><br />
+
+            <strong>Nose:</strong> Layered notes of chocolate, graham crackers,
+            and vanilla lead the way, joined by well-aged oak bordering on
+            antique. Sweetness from brown sugar and macchiato blends with subtle
+            campfire and cedar cigar box aromas. A hint of floral character
+            rounds it out.<br /><br />
+
+            <strong>Palate:</strong> Rich and complex. Brownie edges, toasted
+            coconut, cooked pear, and agave syrup unfold into black cherry,
+            hazelnut spread, and French vanilla. Tannic elements like cigar
+            wrapper and seasoned oak hint at greater age. Rye spice reveals
+            itself with notes of menthol and cinnamon.<br /><br />
+
+            <strong>Finish:</strong> Vanilla and brown sugar fade into cinnamon,
+            nutmeg, and poached orchard fruits. Coconut shell and toffee linger
+            gently.<br /><br />
+
+            <strong>Score:</strong> 8.3/10
+          </div>
+          <label
+            ><input type="radio" name="oldForester" value="A" required /> Glass
+            A</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="B" /> Glass B</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="C" /> Glass C</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="D" /> Glass D</label
+          >
+        </fieldset>
+
+        <input
+          type="hidden"
+          name="_subject"
+          value="Bourbon Tasting Submission"
+        />
+        <input
+          type="hidden"
+          name="_next"
+          value="https://your-site.com/thank-you.html"
+        />
+        <input type="text" name="_gotcha" style="display: none" />
+
+        <button type="submit">Submit Your Guess</button>
+      </form>
     </main>
 
     <script src="brbnscript.js"></script>
-</body>
-
+  </body>
 </html>

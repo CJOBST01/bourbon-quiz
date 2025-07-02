@@ -1,121 +1,163 @@
 /* Page Background */
 body {
-    background: url('images/backgroundchar.png') no-repeat center center fixed;
-    background-size: cover;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #fff;
-    /* Light text for contrast */
+  background: url("images/backgroundchar.png") no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  /* Light text for contrast */
 }
 
 /* Header Styling */
 header {
-    text-align: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.6);
-    /* Adds slight transparency over the background */
-    border-bottom: 2px solid #fff;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Adds slight transparency over the background */
+  border-bottom: 2px solid #fff;
 }
 
 /* Form Styling */
 form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent for readability */
-    border-radius: 12px;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent for readability */
+  border-radius: 12px;
 }
 
 fieldset {
-    border: 1px solid #fff;
-    margin-bottom: 20px;
-    padding: 10px;
+  border: 1px solid #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  max-width: 600px;
+  box-sizing: border-box;
 }
 
 legend {
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
+  display: block;
+  margin-bottom: 8px;
 }
 
 button {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    background-color: #8b4513;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #8b4513;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #a0522d;
+  background-color: #a0522d;
 }
 
 @media (max-width: 600px) {
-    form {
-        padding: 10px;
-    }
+  form {
+    padding: 10px;
+  }
 }
 
 #bottle-image {
-    position: relative;
-    height: 300px;
-    /* Adjust to your desired visible height */
-    overflow: hidden;
-    z-index: 1;
+  position: relative;
+  height: 300px;
+  /* Adjust to your desired visible height */
+  overflow: hidden;
+  z-index: 1;
 }
 
 #bottlePhoto {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    position: static;
-    transform: none; }
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  position: static;
+  transform: none;
+}
 
-        .name-section {
-            margin-bottom: 30px;
-            padding: 15px;
-            background-color: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-        }
-    
-        .name-section label {
-            font-weight: bold;
-            display: block;
-            margin-bottom: 8px;
-            font-size: 1.1em;
-            color: #ffe8b5;
-            /* bourbon gold */
-        }
-    
-        .name-section select,
-        .name-section input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 6px;
-            border: 1px solid #ccc;
-            margin-bottom: 10px;
-            background-color: #2c2c2c;
-            color: #fff;
-        }
-    
-        .name-section select:focus,
-        .name-section input[type="text"]:focus {
-            outline: none;
-            border-color: #a0522d;
-            box-shadow: 0 0 4px #a0522d;
-        }
+.name-section {
+  margin-bottom: 30px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.name-section label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #ffe8b5;
+  /* bourbon gold */
+}
+
+.name-section select,
+.name-section input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  background-color: #2c2c2c;
+  color: #fff;
+}
+
+.name-section select:focus,
+.name-section input[type="text"]:focus {
+  outline: none;
+  border-color: #a0522d;
+  box-shadow: 0 0 4px #a0522d;
+}
+legend {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.toggle-notes {
+  font-size: 0.8em;
+  background-color: transparent;
+  color: #ffd08a;
+  border: 1px solid #ffd08a;
+  padding: 2px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.toggle-notes:hover {
+  background-color: #ffd08a;
+  color: #000;
+}
+
+.tasting-notes-float {
+  display: none;
+  margin-top: 10px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ffe8b5;
+  font-style: italic;
+  font-size: 0.9em;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  box-sizing: border-box;
+}
