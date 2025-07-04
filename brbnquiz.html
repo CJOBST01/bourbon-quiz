@@ -22,7 +22,7 @@
     </header>
 
     <main>
-      <form id="bourbonForm" action="https://formspree.io/f/xqabjevw" method="POST">
+      <form id="bourbonForm">
         <div class="name-section">
           <label for="selectedName">Select Your Name:</label>
           <select
@@ -60,16 +60,14 @@
         </div>
 
         <fieldset>
-          <legend>
-            Michter's Small Batch</legend>
-            <button
-              type="button"
-              class="toggle-notes"
-              onclick="toggleNotes(this)"
-            >
-              Show Notes
-            </button>
-          
+          <legend>Michter's Small Batch</legend>
+          <button
+            type="button"
+            class="toggle-notes"
+            onclick="toggleNotes(this)"
+          >
+            Show Notes
+          </button>
 
           <div class="tasting-notes-float">
             <strong>Nose:</strong> Warm aromas of baked goods dominate —
@@ -100,16 +98,14 @@
         </fieldset>
 
         <fieldset>
-          <legend>
-            Rabbit Hole Heigold</legend>
-            <button
-              type="button"
-              class="toggle-notes"
-              onclick="toggleNotes(this)"
-            >
-              Show Notes
-            </button>
-          
+          <legend>Rabbit Hole Heigold</legend>
+          <button
+            type="button"
+            class="toggle-notes"
+            onclick="toggleNotes(this)"
+          >
+            Show Notes
+          </button>
 
           <div class="tasting-notes-float">
             <strong>Mash Bill:</strong> 70% Corn, 25% Rye, 5% Malted Barley<br />
@@ -223,20 +219,15 @@
           >
         </fieldset>
 
-        <input
-          type="hidden"
-          name="_subject"
-          value="Bourbon Tasting Submission"
-        />
-        <input
-          type="hidden"
-          name="_next"
-          value="https://your-site.com/thank-you.html"
-        />
-        <input type="text" name="_gotcha" style="display: none" />
-
         <button type="submit">Submit Your Guess</button>
       </form>
+      <div id="confirmation" style="display: none; text-align: center">
+        <h2>Thanks for playing!</h2>
+        <p>Your responses were recorded successfully.</p>
+        <a href="submissions.html" class="see-responses-btn"
+          >See the Guesses!</a
+        >
+      </div>
     </main>
 
     <script src="brbnscript.js"></script>
