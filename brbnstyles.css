@@ -39,6 +39,7 @@ fieldset {
   border: 1px solid #fff;
   margin: 20px auto;
   padding: 20px;
+  padding-right: 35px;
   border-radius: 12px;
   background-color: rgba(0, 0, 0, 0.6);
   max-width: 600px;
