@@ -28,6 +28,7 @@
           <select
             name="selectedName"
             id="selectedName"
+            onchange="toggleCustomName(this)"
             required
           >
             <option value="">-- Choose your name --</option>
@@ -51,7 +52,12 @@
           </div>
         </div>
 
-        
+        <div id="customNameWrapper" style="display: none">
+          <label>
+            Custom Name:
+            <input type="text" name="customName" placeholder="Type your name" />
+          </label>
+        </div>
 
         <fieldset>
           <legend>Michter's Small Batch</legend>
@@ -224,6 +230,6 @@
       </div>
     </main>
 
-    <script type="module" src="brbnscript_debug.js"></script>
+    <script type="module" src="brbnscript.js"></script>
   </body>
 </html>
