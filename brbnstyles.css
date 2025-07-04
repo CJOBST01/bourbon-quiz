@@ -162,3 +162,44 @@ legend {
   max-width: 100%;
   box-sizing: border-box;
 }
+/* Submissions List Styling */
+#submissions-section {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+#responseList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#responseList li {
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 16px;
+  padding: 16px;
+  border-left: 4px solid #a0522d;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  color: #ffd08a;
+  font-size: 1em;
+  line-height: 1.4;
+}
+
+#responseList li:hover {
+  transform: scale(1.015);
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+#responseList li strong {
+  color: #ffe8b5;
+  font-size: 1.1em;
+}
+
+#responseList li em {
+  color: #d6c0a5;
+}

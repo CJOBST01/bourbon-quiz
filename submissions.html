@@ -9,41 +9,18 @@
 </head>
 
 <body>
-    <header>
+    <header class="page-header">
         <h1>Past Quiz Submissions</h1>
         <p>Here’s what other tasters guessed.</p>
     </header>
+
     <main>
-        <ul id="responseList" style="max-width: 600px; margin: auto;"></ul>
+        <section id="submissions-section">
+            <ul id="responseList"></ul>
+        </section>
     </main>
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
-        import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyD5Dizm7ZH2JAKwCjzw6Xu8updGXY1aIQQ",
-            authDomain: "bourbonquiz.firebaseapp.com",
-            projectId: "bourbonquiz",
-            storageBucket: "bourbonquiz.appspot.com",
-            messagingSenderId: "931420990292",
-            appId: "1:931420990292:web:fcd5770cc85381cc4e76c1"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        const q = query(collection(db, "quizResponses"), orderBy("timestamp", "desc"));
-        const snapshot = await getDocs(q);
-
-        const list = document.getElementById("responseList");
-        snapshot.forEach((doc) => {
-            const data = doc.data();
-            const li = document.createElement("li");
-            li.innerHTML = `<strong>${data.name || "Anonymous"}:</strong> Michter's: ${data.michters}, Heigold: ${data.heigold}, Uncle Nearest: ${data.uncleNearest}, Old Forester: ${data.oldForester}`;
-            list.appendChild(li);
-        });
-    </script>
+    <script type="module" src="loadSubmissions.js"></script>
 </body>
 
 </html>
