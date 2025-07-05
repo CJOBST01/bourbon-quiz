@@ -30,11 +30,13 @@ document.querySelectorAll(".toggle-notes").forEach((button) => {
   button.addEventListener("click", () => {
     const fieldset = button.closest("fieldset");
     const notesDiv = fieldset.querySelector(".tasting-notes-float");
-    const isVisible = notesDiv.style.display === "block";
-    notesDiv.style.display = isVisible ? "none" : "block";
-    button.textContent = isVisible ? "Show Notes" : "Hide Notes";
+
+    notesDiv.classList.toggle("visible");
+    const isVisible = notesDiv.classList.contains("visible");
+    button.textContent = isVisible ? "Hide Notes" : "Show Notes";
   });
 });
+
 
 // === SUBMIT HANDLING WITH DUPLICATE CHECK AND FIREBASE ===
 const form = document.getElementById("bourbonForm");
