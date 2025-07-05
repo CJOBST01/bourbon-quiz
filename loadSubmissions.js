@@ -19,8 +19,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// 12-hour cutoff in milliseconds
-const twelveHoursAgo = Date.now() - 12 * 60 * 60 * 1000;
+// 1-hour cutoff in milliseconds
+const oneHourAgo = Date.now() - 1 * 60 * 60 * 1000;
 
 const q = query(collection(db, "quizResponses"), orderBy("timestamp", "desc"));
 const snapshot = await getDocs(q);
@@ -31,7 +31,7 @@ snapshot.forEach((doc) => {
   const data = doc.data();
   const timestamp = data.timestamp?.toMillis?.() || data.timestamp;
 
-  if (timestamp && timestamp >= twelveHoursAgo) {
+  if (timestamp && timestamp >= oneHourAgo) {
     const li = document.createElement("li");
     li.innerHTML = `
       <strong>${data.name || "Anonymous"}</strong><br>
@@ -44,5 +44,5 @@ snapshot.forEach((doc) => {
   }
 });
 if (list.children.length === 0) {
-  list.innerHTML = `<li>No submissions in the last 12 hours.</li>`;
+  list.innerHTML = `<li>No submissions in the last 1 hour.</li>`;
 }
