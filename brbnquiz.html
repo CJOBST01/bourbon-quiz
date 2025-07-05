@@ -25,11 +25,7 @@
       <form id="bourbonForm">
         <div class="name-section">
           <label for="selectedName">Select Your Name:</label>
-          <select
-            name="selectedName"
-            id="selectedName"
-            required
-          >
+          <select name="selectedName" id="selectedName" required>
             <option value="">-- Choose your name --</option>
             <option value="Nancy">Nancy</option>
             <option value="Ken">Ken</option>
@@ -51,10 +47,8 @@
           </div>
         </div>
 
-        
-
         <fieldset>
-          <legend>Michter's Small Batch</legend>
+          <legend>Michter's: Small Batch</legend>
           <button
             type="button"
             class="toggle-notes"
@@ -92,7 +86,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>Rabbit Hole Heigold</legend>
+          <legend>Rabbit Hole - Heigold</legend>
           <button
             type="button"
             class="toggle-notes"
@@ -102,22 +96,31 @@
           </button>
 
           <div class="tasting-notes-float">
-            <strong>Nose:</strong> A pleasant scent of toasted caramel, toffee, and a bit of butterscotch. All are scents any
-            bourbon enthusiast would like. Vanilla custard and a faint amount of oak show some nice barrel notes, but can’t
-            entirely cover up the toasted grains scent. It’s not really grainy, but it doesn’t exactly smell aged either. There is
-            a noticeable lack of fruit and aged scents like leathers and tobaccos, as one might expect with a 3-year age
-            statement. Overall, a very pleasant nose that lacks an exciting dynamic.<br /><br />
-          
-            <strong>Palate:</strong> The mouthfeel comes off creamier than expected. Sweetness is found everywhere in sufficient
-            quantities to mostly cover up a bit of youthful astringency and graininess still hiding in the background. Cherries
-            and apricots can be found, and there is a bit of cinnamon spice and even oak spice lurking here and there. Some of the
-            baking spices are soft while others are a bit raw and come off as sharp. As the sip goes on, an element of wintergreen
-            mint comes out and the stone fruits seem to overtake the sweetness.<br /><br />
-          
-            <strong>Finish:</strong> For the youthful age statement, there are more tannins than expected. Dry wood and barrel
-            char follow heavily caramelized stone fruit. The finish has a slight herbaceousness in the end, with mint sticking out
-            the most. This does not ruin the overall sweetness, but is interesting nonetheless.<br /><br />
-          
+            <strong>Nose:</strong> A pleasant scent of toasted caramel, toffee,
+            and a bit of butterscotch. All are scents any bourbon enthusiast
+            would like. Vanilla custard and a faint amount of oak show some nice
+            barrel notes, but can’t entirely cover up the toasted grains scent.
+            It’s not really grainy, but it doesn’t exactly smell aged either.
+            There is a noticeable lack of fruit and aged scents like leathers
+            and tobaccos, as one might expect with a 3-year age statement.
+            Overall, a very pleasant nose that lacks an exciting dynamic.<br /><br />
+
+            <strong>Palate:</strong> The mouthfeel comes off creamier than
+            expected. Sweetness is found everywhere in sufficient quantities to
+            mostly cover up a bit of youthful astringency and graininess still
+            hiding in the background. Cherries and apricots can be found, and
+            there is a bit of cinnamon spice and even oak spice lurking here and
+            there. Some of the baking spices are soft while others are a bit raw
+            and come off as sharp. As the sip goes on, an element of wintergreen
+            mint comes out and the stone fruits seem to overtake the
+            sweetness.<br /><br />
+
+            <strong>Finish:</strong> For the youthful age statement, there are
+            more tannins than expected. Dry wood and barrel char follow heavily
+            caramelized stone fruit. The finish has a slight herbaceousness in
+            the end, with mint sticking out the most. This does not ruin the
+            overall sweetness, but is interesting nonetheless.<br /><br />
+
             <strong>Score:</strong> 6/10
           </div>
 
@@ -131,7 +134,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>Uncle Nearest Single Barrel</legend>
+          <legend>Uncle Nearest - Single Barrel</legend>
           <button
             type="button"
             class="toggle-notes"
@@ -175,7 +178,7 @@
         </fieldset>
 
         <fieldset>
-          <legend>Old Forester The 117 Series</legend>
+          <legend>Old Forester: The 117 Series</legend>
           <button
             type="button"
             class="toggle-notes"
@@ -204,33 +207,44 @@
             gently.<br /><br />
 
             <strong>Score:</strong> 8.3/10
-            </div> 
-            
-            <label><input type="radio" name="oldForester" value="A" required /> Glass A</label>
-            <label><input type="radio" name="oldForester" value="B" /> Glass B</label>
-            <label><input type="radio" name="oldForester" value="C" /> Glass C</label>
-            <label><input type="radio" name="oldForester" value="D" /> Glass D</label>
-            </fieldset>
-            
-            <!-- Submit button -->
-            <button type="submit">Submit Your Guess</button>
-            </form>
-            
-            <!-- Always visible button -->
-            <div style="text-align: center; margin: 20px 0;">
-              <a href="submissions.html" class="see-responses-btn">See the Guesses!</a>
-            </div>
-            
-            <!-- Confirmation screen -->
-            <div id="confirmation" style="display: none; text-align: center">
-              <h2>Thanks for playing!</h2>
-              <p>Your responses were recorded successfully.</p>
-              <a href="submissions.html" class="see-responses-btn">See the Guesses!</a>
-            </div>
-            
-            </main>
-            
-            <script type="module" src="brbnscript_debug.js"></script>
-            </body>
-            
-            </html>
+          </div>
+
+          <label
+            ><input type="radio" name="oldForester" value="A" required /> Glass
+            A</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="B" /> Glass B</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="C" /> Glass C</label
+          >
+          <label
+            ><input type="radio" name="oldForester" value="D" /> Glass D</label
+          >
+        </fieldset>
+
+        <!-- Submit button -->
+        <button type="submit">Submit Your Guess</button>
+      </form>
+
+      <!-- Always visible button -->
+      <div style="text-align: center; margin: 20px 0">
+        <a href="submissions.html" class="see-responses-btn"
+          >See the Guesses!</a
+        >
+      </div>
+
+      <!-- Confirmation screen -->
+      <div id="confirmation" style="display: none; text-align: center">
+        <h2>Thanks for playing!</h2>
+        <p>Your responses were recorded successfully.</p>
+        <a href="submissions.html" class="see-responses-btn"
+          >See the Guesses!</a
+        >
+      </div>
+    </main>
+
+    <script type="module" src="brbnscript_debug.js"></script>
+  </body>
+</html>
