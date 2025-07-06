@@ -10,7 +10,7 @@
   <body>
     <header>
       <h1>Blind Bourbon Tasting Challenge</h1>
-      <p>Match each bourbon to the correct glass (A–D).</p>
+      <p>Match each bourbon to the correct glass (A-D).</p>
       <div id="bottle-image">
         <!-- You can add your image here later -->
         <img
@@ -36,7 +36,7 @@
             <option value="custom">Custom Gamertag</option>
           </select>
 
-          <div id="customNameWrapper" style="display: none">
+          <div id="customNameWrapper" class="hidden">
             <label for="customName">Custom Name:</label>
             <input
               type="text"
@@ -49,196 +49,255 @@
 
         <fieldset>
           <legend>Michter's: Small Batch</legend>
-          <button
-            type="button"
-            class="toggle-notes"
-            onclick="toggleNotes(this)"
-          >
-            Show Notes
-          </button>
 
-          <div class="tasting-notes-float">
-            <strong>Nose:</strong> Warm aromas of baked goods dominate —
-            vanilla, cinnamon, apples, and brown butter evoke a streusel
-            dessert. Rich caramel rounds out the sweet, inviting profile.<br /><br />
-            <strong>Palate:</strong> A touch of rye spice and cinnamon heat adds
-            depth. The sweetness from the nose evolves into caramel candies and
-            toasted citrus zest, with just a hint of oak peeking through.<br /><br />
-            <strong>Finish:</strong> Medium in length, offering more toasted
-            orange zest, cinnamon, and clove. Rye spice lingers pleasantly,
-            adding complexity to an otherwise sweet and smooth close.<br /><br />
-            <strong>Score:</strong> 5.7/10
+          <details name="profile-notes-on-michters">
+            <summary>Notes</summary>
+            <div class="detailsContent">
+              <p>
+                <span class="noteHeader">Nose:</span> Warm aromas of baked goods
+                dominate — vanilla, cinnamon, apples, and brown butter evoke a
+                streusel dessert. Rich caramel rounds out the sweet, inviting
+                profile.
+              </p>
+              <p>
+                <span class="noteHeader">Palate:</span> A touch of rye spice and
+                cinnamon heat adds depth. The sweetness from the nose evolves
+                into caramel candies and toasted citrus zest, with just a hint
+                of oak peeking through.
+              </p>
+              <p>
+                <span class="noteHeader">Finish:</span> Medium in length,
+                offering more toasted orange zest, cinnamon, and clove. Rye
+                spice lingers pleasantly, adding complexity to an otherwise
+                sweet and smooth close.
+              </p>
+              <p><span class="noteHeader">Score:</span> 5.7/10</p>
+            </div>
+          </details>
+
+          <div class="fieldsetInputContainer">
+            <input
+              id="michters-A"
+              type="radio"
+              name="michters"
+              value="A"
+              required=""
+            />
+            <label for="michters-A"> Glass A</label>
+            <input id="michters-B" type="radio" name="michters" value="B" />
+            <label for="michters-B"> Glass B</label>
+            <input id="michters-C" type="radio" name="michters" value="C" />
+            <label for="michters-C"> Glass C</label>
+            <input id="michters-D" type="radio" name="michters" value="D" />
+            <label for="michters-D"> Glass D</label>
           </div>
-
-          <label
-            ><input type="radio" name="michters" value="A" required /> Glass
-            A</label
-          >
-          <label
-            ><input type="radio" name="michters" value="B" /> Glass B</label
-          >
-          <label
-            ><input type="radio" name="michters" value="C" /> Glass C</label
-          >
-          <label
-            ><input type="radio" name="michters" value="D" /> Glass D</label
-          >
         </fieldset>
 
         <fieldset>
           <legend>Rabbit Hole - Heigold</legend>
-          <button
-            type="button"
-            class="toggle-notes"
-            onclick="toggleNotes(this)"
-          >
-            Show Notes
-          </button>
 
-          <div class="tasting-notes-float">
-            <strong>Nose:</strong> A pleasant scent of toasted caramel, toffee,
-            and a bit of butterscotch. All are scents any bourbon enthusiast
-            would like. Vanilla custard and a faint amount of oak show some nice
-            barrel notes, but can’t entirely cover up the toasted grains scent.
-            It’s not really grainy, but it doesn’t exactly smell aged either.
-            There is a noticeable lack of fruit and aged scents like leathers
-            and tobaccos, as one might expect with a 3-year age statement.
-            Overall, a very pleasant nose that lacks an exciting dynamic.<br /><br />
+          <details name="profile-notes-on-heigold">
+            <summary>Notes</summary>
+            <div class="detailsContent">
+              <p>
+                <span class="noteHeader">Nose:</span> A pleasant scent of
+                toasted caramel, toffee, and a bit of butterscotch. All are
+                scents any bourbon enthusiast would like. Vanilla custard and a
+                faint amount of oak show some nice barrel notes, but can't
+                entirely cover up the toasted grains scent. It's not really
+                grainy, but it doesn't exactly smell aged either. There is a
+                noticeable lack of fruit and aged scents like leathers and
+                tobaccos, as one might expect with a 3-year age statement.
+                Overall, a very pleasant nose that lacks an exciting dynamic.
+              </p>
+              <p>
+                <span class="noteHeader">Palate:</span> The mouthfeel comes off
+                creamier than expected. Sweetness is found everywhere in
+                sufficient quantities to mostly cover up a bit of youthful
+                astringency and graininess still hiding in the background.
+                Cherries and apricots can be found, and there is a bit of
+                cinnamon spice and even oak spice lurking here and there. Some
+                of the baking spices are soft while others are a bit raw and
+                come off as sharp. As the sip goes on, an element of wintergreen
+                mint comes out and the stone fruits seem to overtake the
+                sweetness.
+              </p>
+              <p>
+                <span class="noteHeader">Finish:</span> For the youthful age
+                statement, there are more tannins than expected. Dry wood and
+                barrel char follow heavily caramelized stone fruit. The finish
+                has a slight herbaceousness in the end, with mint sticking out
+                the most. This does not ruin the overall sweetness, but is
+                interesting nonetheless.
+              </p>
+              <p><span class="noteHeader">Score:</span> 6/10</p>
+            </div>
+          </details>
 
-            <strong>Palate:</strong> The mouthfeel comes off creamier than
-            expected. Sweetness is found everywhere in sufficient quantities to
-            mostly cover up a bit of youthful astringency and graininess still
-            hiding in the background. Cherries and apricots can be found, and
-            there is a bit of cinnamon spice and even oak spice lurking here and
-            there. Some of the baking spices are soft while others are a bit raw
-            and come off as sharp. As the sip goes on, an element of wintergreen
-            mint comes out and the stone fruits seem to overtake the
-            sweetness.<br /><br />
-
-            <strong>Finish:</strong> For the youthful age statement, there are
-            more tannins than expected. Dry wood and barrel char follow heavily
-            caramelized stone fruit. The finish has a slight herbaceousness in
-            the end, with mint sticking out the most. This does not ruin the
-            overall sweetness, but is interesting nonetheless.<br /><br />
-
-            <strong>Score:</strong> 6/10
+          <div class="fieldsetInputContainer">
+            <input
+              id="heigold-A"
+              type="radio"
+              name="heigold"
+              value="A"
+              required=""
+            />
+            <label for="heigold-A">Glass A</label>
+            <input id="heigold-B" type="radio" name="heigold" value="B" />
+            <label for="heigold-B">Glass B</label>
+            <input id="heigold-C" type="radio" name="heigold" value="C" />
+            <label for="heigold-C">Glass C</label>
+            <input id="heigold-D" type="radio" name="heigold" value="D" />
+            <label for="heigold-D">Glass D</label>
           </div>
-
-          <label
-            ><input type="radio" name="heigold" value="A" required /> Glass
-            A</label
-          >
-          <label><input type="radio" name="heigold" value="B" /> Glass B</label>
-          <label><input type="radio" name="heigold" value="C" /> Glass C</label>
-          <label><input type="radio" name="heigold" value="D" /> Glass D</label>
         </fieldset>
 
         <fieldset>
           <legend>Uncle Nearest - Single Barrel</legend>
-          <button
-            type="button"
-            class="toggle-notes"
-            onclick="toggleNotes(this)"
-          >
-            Show Notes
-          </button>
-          <div class="tasting-notes-float">
-            <strong>Nose:</strong> Sweet, nutty aromas of marzipan, caramel, and
-            vanilla wafers open the experience. Roasted corn-on-the-cob and
-            cinnamon spice follow, with subtle floral notes and a touch of dry
-            hay in the background.<br /><br />
 
-            <strong>Palate:</strong> Rich and rounded. Flavors include roasted
-            corn, marzipan vanilla, new leather, and oak. Fruit character
-            arrives through cherries, orange zest, grape soda, and even a hint
-            of Flintstone chewable vitamins. Caramel turns into wildflower
-            honey, chased by a splash of ginger beer.<br /><br />
+          <details name="profile-notes-on-uncleNearest">
+            <summary>Notes</summary>
+            <div class="detailsContent">
+              <p>
+                <span class="noteHeader">Nose:</span> Sweet, nutty aromas of
+                marzipan, caramel, and vanilla wafers open the experience.
+                Roasted corn-on-the-cob and cinnamon spice follow, with subtle
+                floral notes and a touch of dry hay in the background.
+              </p>
+              <p>
+                <span class="noteHeader">Palate:</span> Rich and rounded.
+                Flavors include roasted corn, marzipan vanilla, new leather, and
+                oak. Fruit character arrives through cherries, orange zest,
+                grape soda, and even a hint of Flintstone chewable vitamins.
+                Caramel turns into wildflower honey, chased by a splash of
+                ginger beer.
+              </p>
+              <p>
+                <span class="noteHeader">Finish:</span> Grain-forward and
+                lingering. Think hoecakes topped with vanilla icing, almond
+                skins replacing the earlier marzipan, and tannins reminiscent of
+                wood polish. Cherries and bitter orange persist with a
+                surprising whisper of banana at the end.
+              </p>
+              <p><span class="noteHeader">Score:</span> 7.6/10</p>
+            </div>
+          </details>
 
-            <strong>Finish:</strong> Grain-forward and lingering. Think hoecakes
-            topped with vanilla icing, almond skins replacing the earlier
-            marzipan, and tannins reminiscent of wood polish. Cherries and
-            bitter orange persist with a surprising whisper of banana at the
-            end.<br /><br />
-
-            <strong>Score:</strong> 7.6/10
+          <div class="fieldsetInputContainer">
+            <input
+              id="uncleNearest-A"
+              type="radio"
+              name="uncleNearest"
+              value="A"
+              required=""
+            />
+            <label for="uncleNearest-A">Glass A</label>
+            <input
+              id="uncleNearest-B"
+              type="radio"
+              name="uncleNearest"
+              value="B"
+            />
+            <label for="uncleNearest-B">Glass B</label>
+            <input
+              id="uncleNearest-C"
+              type="radio"
+              name="uncleNearest"
+              value="C"
+            />
+            <label for="uncleNearest-C">Glass C</label>
+            <input
+              id="uncleNearest-D"
+              type="radio"
+              name="uncleNearest"
+              value="D"
+            />
+            <label for="uncleNearest-D">Glass D</label>
           </div>
-          <label
-            ><input type="radio" name="uncleNearest" value="A" required /> Glass
-            A</label
-          >
-          <label
-            ><input type="radio" name="uncleNearest" value="B" /> Glass B</label
-          >
-          <label
-            ><input type="radio" name="uncleNearest" value="C" /> Glass C</label
-          >
-          <label
-            ><input type="radio" name="uncleNearest" value="D" /> Glass D</label
-          >
         </fieldset>
 
         <fieldset>
           <legend>Old Forester: The 117 Series</legend>
-          <button
-            type="button"
-            class="toggle-notes"
-            onclick="toggleNotes(this)"
-          >
-            Show Notes
-          </button>
-          <div class="tasting-notes-float">
-            <strong>Mash Bill:</strong> 65% Rye, 20% Malted Barley, 15% Corn<br />
-            <strong>Age:</strong> 10 years (Bottled-In-Bond)<br /><br />
 
-            <strong>Nose:</strong> Layered notes of chocolate, graham crackers,
-            and vanilla lead the way, joined by well-aged oak bordering on
-            antique. Sweetness from brown sugar and macchiato blends with subtle
-            campfire and cedar cigar box aromas. A hint of floral character
-            rounds it out.<br /><br />
+          <details name="profile-notes-on-uncleNearest">
+            <summary>Notes</summary>
+            <div class="detailsContent">
+              <p>
+                <span class="noteHeader">Mash Bill:</span> 65% Rye, 20% Malted
+                Barley, 15% Corn
+              </p>
+              <p>
+                <span class="noteHeader">Age:</span> 10 years (Bottled-In-Bond)
+              </p>
+              <p>
+                <span class="noteHeader">Nose:</span> Layered notes of
+                chocolate, graham crackers, and vanilla lead the way, joined by
+                well-aged oak bordering on antique. Sweetness from brown sugar
+                and macchiato blends with subtle campfire and cedar cigar box
+                aromas. A hint of floral character rounds it out.
+              </p>
+              <p>
+                <span class="noteHeader">Palate:</span> Rich and complex.
+                Brownie edges, toasted coconut, cooked pear, and agave syrup
+                unfold into black cherry, hazelnut spread, and French vanilla.
+                Tannic elements like cigar wrapper and seasoned oak hint at
+                greater age. Rye spice reveals itself with notes of menthol and
+                cinnamon.
+              </p>
+              <p>
+                <span class="noteHeader">Finish:</span> Vanilla and brown sugar
+                fade into cinnamon, nutmeg, and poached orchard fruits. Coconut
+                shell and toffee linger gently.
+              </p>
+              <p><span class="noteHeader">Score:</span> 8.3/10</p>
+            </div>
+          </details>
 
-            <strong>Palate:</strong> Rich and complex. Brownie edges, toasted
-            coconut, cooked pear, and agave syrup unfold into black cherry,
-            hazelnut spread, and French vanilla. Tannic elements like cigar
-            wrapper and seasoned oak hint at greater age. Rye spice reveals
-            itself with notes of menthol and cinnamon.<br /><br />
-
-            <strong>Finish:</strong> Vanilla and brown sugar fade into cinnamon,
-            nutmeg, and poached orchard fruits. Coconut shell and toffee linger
-            gently.<br /><br />
-
-            <strong>Score:</strong> 8.3/10
+          <div class="fieldsetInputContainer">
+            <input
+              id="oldForester-A"
+              type="radio"
+              name="oldForester"
+              value="A"
+              required=""
+            />
+            <label for="oldForester-A">Glass A</label>
+            <input
+              id="oldForester-B"
+              type="radio"
+              name="oldForester"
+              value="B"
+            />
+            <label for="oldForester-B">Glass B</label>
+            <input
+              id="oldForester-C"
+              type="radio"
+              name="oldForester"
+              value="C"
+            />
+            <label for="oldForester-C">Glass C</label>
+            <input
+              id="oldForester-D"
+              type="radio"
+              name="oldForester"
+              value="D"
+            />
+            <label for="oldForester-D">Glass D</label>
           </div>
-
-          <label
-            ><input type="radio" name="oldForester" value="A" required /> Glass
-            A</label
-          >
-          <label
-            ><input type="radio" name="oldForester" value="B" /> Glass B</label
-          >
-          <label
-            ><input type="radio" name="oldForester" value="C" /> Glass C</label
-          >
-          <label
-            ><input type="radio" name="oldForester" value="D" /> Glass D</label
-          >
         </fieldset>
 
         <!-- Submit button -->
-        <button type="submit">Submit Your Guess</button>
+        <button id="submitButton" type="submit">Submit Your Guess</button>
       </form>
 
-      <!-- Always visible button -->
-      <div style="text-align: center; margin: 20px 0">
-        <a href="submissions.html" class="see-responses-btn"
-          >See the Guesses!</a
-        >
-      </div>
-
       <!-- Confirmation screen -->
-      <div id="confirmation" style="display: none; text-align: center">
+      <div class="hidden" id="confirmationContainer">
         <h2>Thanks for playing!</h2>
         <p>Your responses were recorded successfully.</p>
+      </div>
+
+      <!-- Always visible button -->
+      <div class="seeGuessesContainer">
         <a href="submissions.html" class="see-responses-btn"
           >See the Guesses!</a
         >
@@ -246,7 +305,7 @@
     </main>
     <footer>
       <p>&copy; 2025 Chris Obst. All rights reserved.</p>
-      </footer>
+    </footer>
     <script type="module" src="brbnscript_debug.js"></script>
   </body>
 </html>

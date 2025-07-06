@@ -86,7 +86,7 @@ form.addEventListener("submit", async (event) => {
 
     console.log("✅ Submission succeeded, showing confirmation.");
   form.style.display = "none";
-    document.getElementById("confirmation").style.display = "block";
+    document.getElementById("confirmationContainer").style.display = "block";
   } catch (error) {
     alert("Something went wrong. Try again later.");
     console.error("Firebase submission error:", error);
